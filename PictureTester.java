@@ -20,7 +20,7 @@ public class PictureTester
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
-    Picture caterpillar = new Picture("caterpillar.jpg");
+    Picture caterpillar = new Picture("images/caterpillar.jpg");
     caterpillar.explore();
     caterpillar.mirrorVertical();
     caterpillar.explore();
@@ -29,7 +29,7 @@ public class PictureTester
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
-    Picture temple = new Picture("temple.jpg");
+    Picture temple = new Picture("images/temple.jpg");
     temple.explore();
     temple.mirrorTemple();
     temple.explore();
@@ -38,7 +38,7 @@ public class PictureTester
   /** Method to test the collage method */
   public static void testCollage()
   {
-    Picture canvas = new Picture("640x480.jpg");
+    Picture canvas = new Picture("images/640x480.jpg");
     canvas.createCollage();
     canvas.explore();
   }
@@ -46,9 +46,37 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("swan.jpg");
+    Picture swan = new Picture("images/swan.jpg");
     swan.edgeDetection(10);
     swan.explore();
+  }
+  
+  public static void testKeepOnlyBlue()
+  {
+	  Picture blueEyes = new Picture("images/White Lightning.jpg");
+	  blueEyes.keepOnlyBlue();
+	  blueEyes.explore();
+  }
+  
+  public static void testNegate()
+  {
+	  Picture blueMotorCycle = new Picture("images/blueMotorcycle.jpg");
+	  blueMotorCycle.negate();
+	  blueMotorCycle.explore();
+  }
+  
+  public static void testGrayscale()
+  {
+	  Picture lion = new Picture("images/femaleLionAndHall.jpg");
+	  lion.grayscale();
+	  lion.explore();
+  }
+  
+  public static void testFixUnderwater()
+  {
+	  Picture water = new Picture("images/water.jpg");
+	  water.fixUnderWater();
+	  water.explore();
   }
   
   /** Main method for testing.  Every class can have a main
@@ -58,21 +86,21 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
-    //testKeepOnlyBlue();
+    testZeroBlue();   
+    testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    //testNegate();
-    //testGrayscale();
-    //testFixUnderwater();
-    //testMirrorVertical();
-    //testMirrorTemple();
+    testNegate();
+    testGrayscale();
+    testFixUnderwater();
+    testMirrorVertical();
+    testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+    testCollage();
     //testCopy();
-    //testEdgeDetection();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
